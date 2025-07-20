@@ -1,0 +1,34 @@
+$Topology Optimization Input File
+FeederSystem1=Static,Static63,63,"C:\Users\KEVIN\AppData\Local\Temp\WB_KEVIN_21928_2\wbnew_files\dp0\SYS-1\MECH\",1,1.000000
+Thermal_condition_feedersystem = 63
+ROTATIONAL_VELOCITY_FEEDERSYSTEM1=63
+nonlin_contact = no
+filter_mode = 1
+min_density = 0.001
+power_law_stiff = 3
+max_iter = 500
+acc = 0.001
+output_freq = 1
+max_num_inter_files = 500
+solver = scpip
+ansys_version = 221
+units = MPA
+distributed = True
+num_procs = 2
+
+cut_off_scp = 1
+version_scp = 402
+
+$Objective:
+objective1=COMP,Objective,63,all,no,1
+
+$Constraints:
+constraint1 = TOT_MASS,Mass Constraint_89, 50
+
+$Design Space:
+design_elements = OptimizationRegionElements.dat
+boundary_nodes = Boundary_Nodes.dat
+
+$Capability Info:
+license_server = 54882@DESKTOP-OTIKLBT
+capability_id = DESKTOP-OTIKLBT-KEVIN-26524-003661

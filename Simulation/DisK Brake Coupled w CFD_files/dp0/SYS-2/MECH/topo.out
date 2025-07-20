@@ -1,0 +1,148 @@
+ ----------------------------------------------------------------------
+ ----------          Welcome to Topology Optimizer          -----------
+ ----------------------------------------------------------------------
+                                                                       
+       Version 2022 R1 (Build: 194) from 20211115                       
+                                                                       
+       Copyright 2022 ANSYS Inc. All Rights Reserved               
+                                                                       
+ ----------------------------------------------------------------------
+ 
+       Execution time: Sat Nov 23 23:04:43 2024
+
+ ----------------------------------------------------------------------
+ 
+   Parameter setting:
+      solver                   = Scpip
+      ansys version            = 2022 R1
+      design elements          = OptimizationRegionElements.dat
+      feedersystem list:
+       - Static system 'Static63' with id 63: 1 load case(s) at t = 1, has thermal condition, has rotational velocity
+      filter mode              = 1
+      penalty parameter        = 3
+      minimum member size      = 0
+      maximum member size      = 0
+      minimum density          = 0.001
+      initial response scaling = yes
+      boundary padding         = true,bounds,vol
+      restart information      = final
+      mapdl ncnv               = 1e+12
+      maximum iteration        = 500
+      acc                      = 0.001
+      units                    = MPA
+      output frequency         = 1
+      max intermediate files   = 500
+      dynamic max approach     = true, 0.9
+      objective 1              = single compliance (force load) for load step 1 of feeder system 'Static63' [1]
+      constraint 1             = total mass with lower bound 50 and upper bound 50
+      method                   = SCP
+      acc scp                  = 1e-06
+      version scp              = 402
+      cut off in scp           = 1
+      linear inequalities remain in active set in scp = selected always
+      initial penalty scp      = 1
+      move limit scp           = 0.5
+      asymptote strategy       = program controlled
+
+ ----------------------------------------------------------------------
+   Start generating constant data...
+   ...done
+   Start generating tree...
+   ...finished.
+   Start generating element neighborhood...
+    10 Percent done
+    20 Percent done
+    30 Percent done
+    40 Percent done
+    50 Percent done
+    60 Percent done
+    70 Percent done
+    80 Percent done
+    90 Percent done
+   100 Percent done
+   ...finished.
+ Determine regions where minimum member size cannot be satisfied.
+   Starting MAPDL...
+   Asymptote strategy applied: adaptive
+ 
+  INITIAL SUMMARY
+  ---------------
+  Objective(s):
+    [  1] Name: Objective
+          Value : 2.54596e+04
+ 
+  Constraint(s):
+    [  1] Name: Mass Constraint_89
+          LB: 6.97349e-05 <= Value: 1.39470e-04 <= UB: 6.97349e-05  Deviation: 100 %
+ 
+  Iter :  number of iterations
+  #LS  :  number of line search iterations
+  #ME  :  number of model evaluations
+
+                                         max relative
+                                         deviation of
+                         objective       constraints     convergence
+   Iter  #LS     #ME     measurement     in %            criterion
+   ------------------------------------------------------------------
+      0    0       0             ---     1.00000e+02             ---
+      1    1       1     1.00000e+00     1.06280e+02             ---
+      2    1       2     9.95708e-01     9.90301e+01     9.94593e-01
+      3    1       3     9.92318e-01     9.11360e+01     9.14766e-01
+      4    1       4     9.89759e-01     8.47550e+01     8.50129e-01
+      5    1       5     9.83537e-01     7.72102e+01     7.78388e-01
+      6    1       6     9.61230e-01     6.37439e+01     6.60120e-01
+      7    1       7     9.52315e-01     3.85095e+01     3.94369e-01
+      8    1       8     9.20831e-01     2.20628e+01     2.53689e-01
+      9    1       9     8.76644e-01     8.90776e+00     1.37063e-01
+     10    1      10     8.38286e-01     1.42963e+00     5.80528e-02
+     11    1      11     8.14488e-01     1.43670e-02     2.83886e-02
+     12    1      12     8.05222e-01     2.82345e-04     1.13760e-02
+     13    1      13     7.96807e-01     2.30552e-04     1.04505e-02
+     14    1      14     7.90087e-01     2.84719e-04     8.43350e-03
+     15    3      17     7.88279e-01     5.46552e-04     2.28890e-03
+     16    1      18     7.82233e-01     2.59411e-04     7.67000e-03
+     17    4      22     7.80866e-01     5.38455e-04     1.74772e-03
+     18    1      23     7.78438e-01     2.55106e-04     3.10853e-03
+     19    4      27     7.76787e-01     4.28171e-04     2.12121e-03
+     20    1      28     7.71032e-01     2.50696e-04     7.40821e-03
+     21    3      31     7.77321e-01     4.14900e-04     8.15582e-03
+     22    1      32     7.66353e-01     2.44498e-04     1.41094e-02
+     23    4      36     7.65023e-01     3.94944e-04     1.73536e-03
+     24    1      37     7.55117e-01     2.45560e-04     1.29494e-02
+     25    3      40     7.52395e-01     4.06145e-04     3.60468e-03
+     26    1      41     7.48310e-01     1.86259e-04     5.42951e-03
+     27    2      43     7.45826e-01     4.04565e-04     3.31859e-03
+     28    1      44     7.44026e-01     9.85805e-05     2.41400e-03
+     29    1      45     7.43316e-01     1.99724e-04     9.53756e-04
+     30    1      46     7.42140e-01     2.05858e-04     1.58294e-03
+     31    1      47     7.41429e-01     1.93965e-04     9.57528e-04
+     32    1      48     7.40255e-01     1.95665e-04     1.58411e-03
+     33    1      49     7.39259e-01     1.83046e-04     1.34530e-03
+     34    1      50     7.38704e-01     1.81990e-04     7.49897e-04
+     35    1      51     7.37408e-01     1.80903e-04     1.75538e-03
+     36    2      53     7.36060e-01     3.98960e-04     1.82781e-03
+     37    1      54     7.34507e-01     1.98654e-04     2.10928e-03
+     38    2      56     7.34158e-01     2.59870e-04     4.76214e-04
+     39    1      57     7.33622e-01     3.37235e-04     7.29998e-04
+     40    2      59     7.33491e-01     4.02474e-04     1.77316e-04
+ 
+  FINAL SUMMARY
+  -------------
+  Number of iterations: 40
+  Total number of model evaluations: 59
+
+  Objective(s):
+    [  1] Name: Objective
+          Value : 2.45654e+04
+ 
+  Constraint(s):
+    [  1] Name: Mass Constraint_89
+          LB: 6.97349e-05 <= Value: 6.97346e-05 <= UB: 6.97349e-05  Deviation: -0.000402474 %
+ ----------------------------------------------------------------------
+ --> Topology Optimizer finished successfully
+     Total time:  0h 18m 22s
+     CPU time:    0h 5m 29s
+     Peak Memory: 733708 K
+     I/O Read:    8000778924 Bytes
+     I/O Write:   248160630 Bytes
+ ----------------------------------------------------------------------
